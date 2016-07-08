@@ -6,6 +6,27 @@ This removes the need for specific module registration.
 
 Behaviours are the equivalent to interfaces in Elixir.
 
+## Installation
+
+The package can be installed as:
+
+  1. Add `behaviour_introspection` to your list of dependencies in `mix.exs`:
+
+    ```elixir
+    def deps do
+      [{:behaviour_introspection, git: "git@github.com:findmypast/behaviour-introspection.git",tag:"0.1.0"}]
+    end
+    ```
+
+  2. Ensure `behaviour_introspection` is started before your application:
+
+    ```elixir
+    def application do
+      [applications: [:behaviour_introspection]]
+    end
+    ```
+  3. Run 'mix deps.get'
+
 ## Example
 
 ```elixir
@@ -49,26 +70,3 @@ end
 "This is the first simple implementation"
 "This is the second simple implementation"
 ```
-
-
-
-## Installation
-
-The package can be installed as:
-
-  1. Add `behaviour_introspection` to your list of dependencies in `mix.exs`:
-
-    ```elixir
-    def deps do
-      [{:behaviour_introspection, git: "git@github.com:findmypast/behaviour-introspection.git",tag:"0.1.0"}]
-    end
-    ```
-
-  2. Ensure `behaviour_introspection` is started before your application:
-
-    ```elixir
-    def application do
-      [applications: [:behaviour_introspection]]
-    end
-    ```
-  3. Run 'mix deps.get'
